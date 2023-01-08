@@ -67,8 +67,8 @@ Rules which must be followed mandatorily when writing the description of an odoo
 		- *Fields*, classified by their model names.
 		- *Views*, classified by their types (New, Extensions).
 		- *Templates*, classified by their types (Reports, Extensions).
-			- Reports, templates belonging to reports, classified by their reports.
-				- main.template/report.name (Containing other templates for the report classified by their types (New, Extensions))
+			- Reports, templates belonging to reports, classified by their reports and their types (New, Extensions).
+				- main-template/report-name
 					- New, templates created for the report.
 					- Extensions, templates extended for the report.
 			- Extensions, templates extended but not for reports.
