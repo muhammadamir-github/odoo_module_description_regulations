@@ -40,16 +40,16 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 3. Lists should be of the correct type, the following is to assist:
 	- If list's children *have* children
-		- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
-			- If list's chldren are Objects not Classes
+		- If list's chldren are Objects not Classes
+			- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
 				- Enumerated List
 			- Else
 				- Bullet List
 		- Else
 			- Bullet List
 	- Else If list's children *DON'T have* children
-		- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
-			- If list's chldren are Objects not Classes
+		- If list's chldren are Objects not Classes
+			- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
 				- If list's children's text is *long*
 					- Enumerated List
 				- Else If list's children's text is *short*
