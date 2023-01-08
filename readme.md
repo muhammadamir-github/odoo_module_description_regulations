@@ -4,6 +4,9 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 ## Terminology
 1. **Section**, root/top level *bullet* list.
+2. **Object**, name/description of an entity added by the module. 
+	- For Example: view/field/report's name/id.
+2. **Class**, a classifier for the Objects, some are mentioned in the last rule, can be arbitrarily created.
 
 ## Notes
 
@@ -18,13 +21,13 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 	2. A list-item's type/style must be:
 		1. *Field List*, If
-			- list-item is in the second-last level *viz* list-item's children DON'T have children (children are possibly text-items) **AND**
-			- text of list-item's children is *short* not long **AND**
 			- list-item's children are **Objects not Classes**
+			- text of list-item's children is *short* not long **AND**
+			- list-item is in the second-last level *viz* list-item's children DON'T have children (children are possibly text-items) **AND**
 			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
 		2. *Enumerated List*, If
-			- list-item's children's text is *long* not short (To be checked only if list-item's children don't have children since it COULD be possible to make it a Field List) **AND**
 			- list-item's children are **Objects not Classes**
+			- list-item's children's text is *long* not short (To be checked only if list-item's children don't have children since it COULD be possible to make it a Field List) **AND**
 			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
 				- For example, list-item "Fields" having list-items for models: "model1", "model2", which in turn have text-items for fields: "field1", "field2", CAN NOT BE an enumerated list **since it lists models (Classes) and not fields**.
 					- Fields
@@ -46,7 +49,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 			- Bullet List
 	- Else If list's children *DON'T have* children
 		- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
-			If list's chldren are Objects not Classes
+			- If list's chldren are Objects not Classes
 				- If list's children's text is *long*
 					- Enumerated List
 				- Else If list's children's text is *short*
