@@ -18,13 +18,15 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 	2. A list-item's type/style must be:
 		1. *Field List*, If
-			- list-item is in the second-last level *viz* list-item's children have no children (children are possibly text-items) **AND**
-			- text of list-item's children is *short* and not long **AND**
-			- list-item's children are of nature the list-item is supposed to categorize/classify.
+			- list-item is in the second-last level *viz* list-item's children DON'T have children (children are possibly text-items) **AND**
+			- text of list-item's children is *short* not long **AND**
+			- list-item's children are **Objects not Classes**
+			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
 		2. *Enumerated List*, If
-			- list-item's children have no children BUT their text is *long* and not short **AND**
-			- list-item's children are of nature the list-item is supposed to categorize/classify.
-				- For example, list-item "Fields" having list-items for models: "model1", "model2", which in turn have text-items for fields: "field1", "field2", CAN NOT BE an enumerated list **since it lists models and not fields**.
+			- list-item's children's text is *long* not short (To be checked only if list-item's children don't have children since it COULD be possible to make it a Field List) **AND**
+			- list-item's children are **Objects not Classes**
+			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
+				- For example, list-item "Fields" having list-items for models: "model1", "model2", which in turn have text-items for fields: "field1", "field2", CAN NOT BE an enumerated list **since it lists models (Classes) and not fields**.
 					- Fields
 						- model1
 							- field1
@@ -35,16 +37,22 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 3. Lists should be of the correct type, the following is to assist:
 	- If list's children *have* children
-		- If list's chldren's are of *nature* the list is supposed to classify/categorize
-			- Enumerated List
+		- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
+			- If list's chldren are Objects not Classes
+				- Enumerated List
+			- Else
+				- Bullet List
 		- Else
 			- Bullet List
-	- Else If list's children *DONT have* children
-		- If list's chldren's are of *nature* the list is supposed to classify/categorize
-			- If list's children's text is *long*
-				- Enumerated List
-			- Else If list's children's text is *short*
-				- Field List
+	- Else If list's children *DON'T have* children
+		- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
+			If list's chldren are Objects not Classes
+				- If list's children's text is *long*
+					- Enumerated List
+				- Else If list's children's text is *short*
+					- Field List
+			- Else
+				- Bullet List
 		- Else
 			- Bullet List
 
