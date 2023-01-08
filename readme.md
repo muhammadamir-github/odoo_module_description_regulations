@@ -3,14 +3,14 @@
 Rules which must be followed mandatorily when writing the description of an odoo addon/module in its manifest file.
 
 ## Terminology
-1. **Section**, root level lists viz first lists.
+1. **Section**, root/top level *bullet* list.
 
 ## Rules
 
 1. Description, by odoo's requirment, must be written using  **reStructuredText**.
 
 2. Everything must be written in/as **lists**.
-	1. Each list item must be a list or text and will be referred to as **list-item** or **text-item** in this document.
+	1. Each list item (list's child NOT list-item) must be a list or text and will be referred to as **list-item** or **text-item** in this document.
 
 	2. A list-item's type/style must be:
 		1. *Field List*, If
