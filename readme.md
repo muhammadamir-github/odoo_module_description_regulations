@@ -5,6 +5,10 @@ Rules which must be followed mandatorily when writing the description of an odoo
 ## Terminology
 1. **Section**, root/top level *bullet* list.
 
+## Notes
+
+1. Children of a Field List appear to be a **single value** when placed in the same line and that must always be remembered since it can cause confusion when looking at the source of the description.
+
 ## Rules
 
 1. Description, by odoo's requirment, must be written using  **reStructuredText**.
@@ -14,7 +18,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 	2. A list-item's type/style must be:
 		1. *Field List*, If
-			- list-item is in the second-last level *viz* list-item's children have no children (is possibly a text-item) **AND**
+			- list-item is in the second-last level *viz* list-item's children have no children (children are possibly text-items) **AND**
 			- text of list-item's children is *short* and not long **AND**
 			- list-item's children are of nature the list-item is supposed to categorize/classify.
 		2. *Enumerated List*, If
