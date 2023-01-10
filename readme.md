@@ -70,7 +70,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 		- Else
 			- Bullet List
 
-4. Description can have the following Sections:
+4. Description must have the following Sections:
 	- **Requirements**, which should list the required *Fields* and *Functions* added by other modules classified by their model names.
 
 	- **Adds**, which should list the following entities added by the addon:
