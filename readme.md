@@ -4,41 +4,52 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 ## Terminology
 1. **Section**, root/top level *bullet* list.
-2. **Object**, name/description of an entity added by the module. 
-	- For Example: view/field/report's name/id.
-2. **Class**, a classifier for the Objects, some are mentioned in the last rule, can be arbitrarily created.
+2. **List-Item**, item of a list, having items of its own.
+3. **Text-Item**, item of a list, *not having* items of its own.
+2. **Object**, item of a list *(List-Item or Text-Item)*, which refers to an entity **added** by the module using its name **as its name or text**.
+	- Examples
+		1. **extension_name**:
+			- button
+			- field
+			- chart
+		2. **Description of a functionality.**
+2. **Class**, item of a list *(Only List-Item)*, which classifies the Objects and *lists* them. Some are mentioned in the last rule and can be created arbitrarily.
 
 ## Notes
 
-1. Children of a Field List appear to be a **single value** when placed in the same line and that must always be remembered to avoid any confusion when looking at the source of the description.
+1. Every item of a list is either a Class or an Object.
+2. **A *Class* is always a *List-Item* but can also be an *Object*** *viz* A Class always lists but can also refer to an entity added through its name (list's name).
+	- Example, elements added by extensions are classified by their extensions:
+		- **extension_name** (both, an Object and a Class):
+			- button
+			- field
+			- chart
+3. Children of a Field List appear to be a **single value** when placed in the same line and that must always be remembered to avoid any confusion when looking at the source of the description.
 
 ## Rules
 
 1. Description, by odoo's requirement, must be written using  **reStructuredText**.
 
 2. Everything must be written in/as **lists**.
-	1. Each list item (list's child NOT list-item) must be a list or text and will be referred to as **list-item** or **text-item** in this document.
-
-	2. A list-item's type/style must be:
+	1. A list-item's type/style must be:
 		1. *Field List*, If
-			- list-item's children are **Objects not Classes** **AND**
+			- list-item's children are **Objects  but not Classes** **AND**
 			- text of list-item's children is *short* not long **AND**
-			- list-item is in the second-last level *viz* list-item's children DON'T have children *viz* children are **text-items** **AND**
-			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
+			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to contain/list.
 		2. *Enumerated List*, If
-			- list-item's children are **Objects not Classes** **AND**
-			- list-item's children's text is *long* not short (To be checked only if list-item's children don't have children in which case it COULD be possible to make it a Field List) **AND**
-			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
-				- For example, list-item "Fields" having list-items for models: "model1", "model2", which in turn have text-items for fields: "field1", "field2", CAN NOT BE an enumerated list **since it lists models (Classes) and not fields (Objects)**.
+			- list-item's children are **Objects** **AND**
+			- list-item's children's text is *long* not short *(To be checked only if list-item's children are not Classes in which case it MAY BE possible to make it a Field List)* **AND**
+			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to contain/list.
+			- Example
+				- list-item/Class "*Fields*" having Classes "*model1*" and "*model2*" for models (not added by the module), which in turn have Objects "*field1*" and "*field2*" for fields (added by the module), CAN NOT BE an Enumerated List **since it violates first condition by listing models (Classes) and not fields (Objects)**.
 					- Fields
 						- model1
 							- field1
 							- field2
-				- But a list-item "Extensions" having items **(list or text)** for extensions *OR* a list-item "Functionality" having items for functionalities CAN BE enumerated **since they list what they are supposed to categorize**.
-
+				- But list-items/Classes for models CAN BE *Enumerated/Field* Lists **since they fulfill all conditions**.
 		3. *Bullet List*, If no other style is applicable.
 
-3. Lists should be of the correct type, the following is to assist:
+3. The following is for assistance in finding the correct list style:
 	- If list's children *have* children
 		- If list's chldren are Objects not Classes
 			- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
