@@ -10,31 +10,31 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 ## Notes
 
-1. Children of a Field List appear to be a **single value** when placed in the same line and that must always be remembered since it can cause confusion when looking at the source of the description.
+1. Children of a Field List appear to be a **single value** when placed in the same line and that must always be remembered to avoid any confusion when looking at the source of the description.
 
 ## Rules
 
-1. Description, by odoo's requirment, must be written using  **reStructuredText**.
+1. Description, by odoo's requirement, must be written using  **reStructuredText**.
 
 2. Everything must be written in/as **lists**.
 	1. Each list item (list's child NOT list-item) must be a list or text and will be referred to as **list-item** or **text-item** in this document.
 
 	2. A list-item's type/style must be:
 		1. *Field List*, If
-			- list-item's children are **Objects not Classes**
+			- list-item's children are **Objects not Classes** **AND**
 			- text of list-item's children is *short* not long **AND**
-			- list-item is in the second-last level *viz* list-item's children DON'T have children (children are possibly text-items) **AND**
+			- list-item is in the second-last level *viz* list-item's children DON'T have children *viz* children are **text-items** **AND**
 			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
 		2. *Enumerated List*, If
-			- list-item's children are **Objects not Classes**
-			- list-item's children's text is *long* not short (To be checked only if list-item's children don't have children since it COULD be possible to make it a Field List) **AND**
+			- list-item's children are **Objects not Classes** **AND**
+			- list-item's children's text is *long* not short (To be checked only if list-item's children don't have children in which case it COULD be possible to make it a Field List) **AND**
 			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to categorize/classify.
-				- For example, list-item "Fields" having list-items for models: "model1", "model2", which in turn have text-items for fields: "field1", "field2", CAN NOT BE an enumerated list **since it lists models (Classes) and not fields**.
+				- For example, list-item "Fields" having list-items for models: "model1", "model2", which in turn have text-items for fields: "field1", "field2", CAN NOT BE an enumerated list **since it lists models (Classes) and not fields (Objects)**.
 					- Fields
 						- model1
 							- field1
 							- field2
-				- But a list-item "Extensions" having text-items for names: "extension.name" *OR* a list-item "Functionality" having text-items for descriptions: "functionality description", CAN BE enumerated **since they list what they are supposed to categorize**.
+				- But a list-item "Extensions" having items **(list or text)** for extensions *OR* a list-item "Functionality" having items for functionalities CAN BE enumerated **since they list what they are supposed to categorize**.
 
 		3. *Bullet List*, If no other style is applicable.
 
