@@ -50,25 +50,19 @@ Rules which must be followed mandatorily when writing the description of an odoo
 		3. *Bullet List*, If no other style is applicable.
 
 3. The following is for assistance in finding the correct list style:
-	- If list's children *have* children
-		- If list's chldren are Objects not Classes
-			- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
+	- If list's children are Objects
+		- If list's chldren are of *nature* the *list or a parent of the list* is supposed to contain/list
+			- If list's children's text is long
 				- Enumerated List
 			- Else
-				- Bullet List
-		- Else
-			- Bullet List
-	- Else If list's children *DON'T have* children
-		- If list's chldren are Objects not Classes
-			- If list's chldren are of *nature* the *list or a parent of the list* is supposed to classify/categorize
-				- If list's children's text is *long*
-					- Enumerated List
-				- Else If list's children's text is *short*
+				- If list's children are *ALSO* Classes
+					- Bullet List
+				- Else
 					- Field List
-			- Else
-				- Bullet List
 		- Else
 			- Bullet List
+	- Else If list's children are *ONLY* Classes
+		- Bullet List
 
 4. Description must have the following Sections:
 	- **Requirements**, which should list the required *Fields* and *Functions* added by other modules classified by their model names.
