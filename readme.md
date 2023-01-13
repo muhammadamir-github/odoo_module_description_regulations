@@ -17,8 +17,9 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 ## Notes
 
-1. Every item of a list is either a Class or an Object.
-2. **A *Class* is always a *List-Item* but can also be an *Object*** *viz* A Class always lists but can also refer to an entity added through its name (list's name).
+1. Every item of a list is *atleast* either a Class or an Object.
+2. **A *Class* is always a *List-Item* and a List-Item is always a Class but can also be an *Object*** 
+	- *viz* A Class always lists but can also refer to an entity added by the module through its name (list's name).
 	- Example, elements added by extensions are classified by their extensions:
 		- **extension_name** (both, an Object and a Class):
 			- button
@@ -38,7 +39,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to contain/list.
 		2. *Enumerated List*, If
 			- list-item's children are **Objects** **AND**
-			- list-item's children's text is *long* not short *(To be checked only if list-item's children are not Classes in which case it MAY BE possible to make it a Field List)* **AND**
+			- list-item's children's text is *long* not short *(To be checked only if list-item's children are not Classes in which case it MAY BE possible to make list-item a Field List)* **AND**
 			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to contain/list.
 			- Example
 				- list-item/Class "*Fields*" having Classes "*model1*" and "*model2*" for models (not added by the module), which in turn have Objects "*field1*" and "*field2*" for fields (added by the module), CAN NOT BE an Enumerated List **since it violates first condition by listing models (Classes) and not fields (Objects)**.
@@ -46,17 +47,17 @@ Rules which must be followed mandatorily when writing the description of an odoo
 						- model1
 							- field1
 							- field2
-				- But list-items/Classes for models CAN BE *Enumerated/Field* Lists **since they fulfill all conditions**.
+				- But list-items/Classes of models CAN BE *Enumerated/Field* Lists **since they fulfill all conditions**.
 		3. *Bullet List*, If no other style is applicable.
 
 3. The following is for assistance in finding the correct list style:
 	- If list's children are Objects
 		- If list's chldren are of *nature* the *list or a parent of the list* is supposed to contain/list
-			- If list's children's text is long
+			- If list's children are *ALSO* Classes
 				- Enumerated List
-			- Else
-				- If list's children are *ALSO* Classes
-					- Bullet List
+			- Else If list's children are *ONLY* Objects
+				- If list's children's text is long
+					- Enumerated List
 				- Else
 					- Field List
 		- Else
