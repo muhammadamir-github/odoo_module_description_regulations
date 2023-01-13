@@ -26,7 +26,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 			- field
 			- chart
 3. Children of a *Field List* appear to be a **single value** when placed in the same line and that must always be remembered to avoid any confusion when looking at the source of the description.
-4. *Views and Templates*, in Adds Section, can list elements added/removed by them classified into *Added* and *Removed* and further classified by *their types which can be created arbritarily* (Fields, Buttons, Texts, Headings, Tables etc).
+4. *Views and Templates*, in Adds Section, can list elements added/removed by them classified into *Adds* and *Removes* and further classified by *their types which can be created arbritarily* (Fields, Buttons, Texts, Headings, Tables etc).
 
 ## Rules
 
@@ -106,9 +106,11 @@ Adds:
 			1. None
 		- Extensions:
 			1. **purchase_order_form_extension** extends purchase.purchase_order_form & **view_order_form_extension** extends sale.view_order_form:
-				- :Buttons: cp_button_create_payment, cp_button_view_payments
+				- Adds:
+					- :Buttons: cp_button_create_payment, cp_button_view_payments
 			2. **view_account_payment_form_extension** exnteds account.view_account_payment_form:
-				- :Fields: cp_reserved_for, cp_so_reserved_for_id, cp_po_reserved_for_id
+				- Adds:
+					- :Fields: cp_reserved_for, cp_so_reserved_for_id, cp_po_reserved_for_id
 	- Templates:
 		- Reports:
 			1. **payment**, a custom report for account.payment with structure and style same as Pocket Journal's documents.:
