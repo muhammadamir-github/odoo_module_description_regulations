@@ -84,9 +84,8 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 ## Description of *custom_payment* addon as an example
 ```
-`Know more about the description format. <https://github.com/muhammadamir-github/odoo_module_description_regulations/blob/master/readme.md>`_.
+`Read the Description Regulations <https://github.com/muhammadamir-github/odoo_module_description_regulations/blob/master/readme.md>`_
 
-|
 |
 
 Requirements:
@@ -94,10 +93,7 @@ Requirements:
 		- :account.move: ci_tax_by_rcm
 Adds:
 	- Functionality:
-		1. To reserve/lock/restrict payments (account.payment) for invoices (account.move) of a specific 
-		| sale/purchase order which allows users to record an ADVANCE PAYMENT for a sale/purchase without 
-		| requiring/recording/creating an/a invoice/bill. These payments act as **Receipt/Refund** vouchers
-		| (Credit/Debit notes are issued instead of Receipt/Refund vouchers if an invoice/bill has been issued).
+		1. To reserve/lock/restrict payments (account.payment) for invoices (account.move) of a specific sale/purchase order which allows users to record an ADVANCE PAYMENT for a sale/purchase without requiring/recording/creating an/a invoice/bill. These payments act as **Receipt/Refund** vouchers (Credit/Debit notes are issued instead of Receipt/Refund vouchers if an invoice/bill has been issued).
 	- Fields:
 		- :account.payment: cp_reserved_for, cp_so_reserved_for_id, cp_po_reserved_for_id
 		- :purchase.order and sale.order: cp_reserved_payments_count
@@ -113,7 +109,7 @@ Adds:
 					- :Fields: cp_reserved_for, cp_so_reserved_for_id, cp_po_reserved_for_id
 	- Templates:
 		- Reports:
-			1. **payment**, a custom report for account.payment with structure and style same as Pocket Journal's documents.:
+			1. **payment**, a custom report for account.payment with structure and style same as Pocket Journal's documents:
 				- :New: content, header, footer, fonts, sharedcss, external_layout
 				- :Extensions: None
 		- :Extensions: None
