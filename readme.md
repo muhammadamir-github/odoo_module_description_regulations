@@ -82,7 +82,8 @@ Rules which must be followed mandatorily when writing the description of an odoo
 		- *Actions*, classified by their types.
 		- *Paper Formats*
 
-## Description of *custom_payment* addon as an example
+## Example
+Description of a custom addon.
 ```
 `Read the Description Regulations <https://github.com/muhammadamir-github/odoo_module_description_regulations/blob/master/readme.md>`_
 
