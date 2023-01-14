@@ -17,7 +17,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 
 ## Notes
 
-1. Every *item* of a list is *atleast* either a Class or an Object.
+1. Every *item* of a list is *at least* either a Class or an Object.
 2. **A *Class* is always a *List-Item* and a List-Item is always a Class but can also be an *Object*** 
 	- *viz* A Class always lists but can also refer to an entity added by the module through its name (list's name).
 	- Example, elements added by extensions are classified by their extensions:
@@ -26,7 +26,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 			- field
 			- chart
 3. Children of a *Field List* appear to be a **single value** when placed in the same line and that must always be remembered to avoid any confusion when looking at the source of the description.
-4. *Views and Templates*, in Adds Section, can list elements added/removed by them classified into *Adds* and *Removes* and further classified by *their types which can be created arbritarily* (Fields, Buttons, Texts, Headings, Tables etc).
+4. *Views and Templates*, in Adds Section, can list elements added/removed by them classified into *Adds* and *Removes* and further classified by *their types which can be created arbitrarily* (Fields, Buttons, Texts, Headings, Tables etc).
 
 ## Rules
 
@@ -35,7 +35,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 2. Everything must be written in/as **lists**.
 	1. A list-item's type/style must be:
 		1. *Field List*, If
-			- list-item's children are **Objects  but not Classes** **AND**
+			- list-item's children are **Objects but not Classes** **AND**
 			- text of list-item's children is *short* not long **AND**
 			- list-item's children are of nature the *list-item or a parent of the list-item* is supposed to contain/list.
 		2. *Enumerated List*, If
