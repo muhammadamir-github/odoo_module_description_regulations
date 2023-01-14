@@ -73,12 +73,11 @@ Rules which must be followed mandatorily when writing the description of an odoo
 		- *Functionality*.
 		- *Fields*, classified by their model names.
 		- *Views*, classified by their types (New, Extensions).
-		- *Templates*, classified by their types (Reports, Extensions).
-			- Reports, templates belonging to reports, classified by their reports and their types (New, Extensions).
-				- main-template/report-name
-					- New, templates created for the report.
-					- Extensions, template extensions for the report.
-			- Extensions, template extensions but not for reports.
+		- *Templates*, classified by their types (Reports, New, Extensions).
+			- Reports, templates belonging to a report, classified by their reports.
+				- Example, main-template/report-name: templates created for the report.
+			- New, templates not extending and not belonging to a report.
+			- Extensions, template extensions.
 		- *Actions*, classified by their types.
 		- *Paper Formats*
 
@@ -102,18 +101,19 @@ Adds:
 		- New:
 			1. None
 		- Extensions:
-			1. **purchase_order_form_extension** extends purchase.purchase_order_form & **view_order_form_extension** extends sale.view_order_form:
+			1. purchase_order_form_extension extends purchase.purchase_order_form & view_order_form_extension extends sale.view_order_form:
 				- Adds:
 					- :Buttons: cp_button_create_payment, cp_button_view_payments
-			2. **view_account_payment_form_extension** exnteds account.view_account_payment_form:
+			2. view_account_payment_form_extension exnteds account.view_account_payment_form:
 				- Adds:
 					- :Fields: cp_reserved_for, cp_so_reserved_for_id, cp_po_reserved_for_id
 	- Templates:
 		- Reports:
-			1. **payment**, a custom report for account.payment with structure and style same as Pocket Journal's documents:
-				- :New: content, header, footer, fonts, sharedcss, external_layout
-				- :Extensions: None
-		- :Extensions: None
+			1. :**payment**, a custom report for account.payment with structure and style same as Pocket Journal's documents: content, header, footer, fonts, sharedcss, external_layout
+		- New: 
+			1. None
+		- Extensions: 
+			1. None
 	- Actions:
 		- :Report: payment_action
 	- :Paper Formats: paperformat (A4 (custom_payment))
