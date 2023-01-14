@@ -76,7 +76,7 @@ Rules which must be followed mandatorily when writing the description of an odoo
 		- *Templates*, classified by their types (Reports, New, Extensions).
 			- Reports, templates belonging to a report, classified by their reports.
 				- Example, main-template/report-name: templates created for the report.
-			- New, templates not belonging to a report.
+			- New, templates not extending and not belonging to a report.
 			- Extensions, template extensions.
 		- *Actions*, classified by their types.
 		- *Paper Formats*
