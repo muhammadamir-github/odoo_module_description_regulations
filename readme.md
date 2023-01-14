@@ -1,4 +1,4 @@
-# **Odoo Module Description Regulations V.1.0**
+# **Odoo Module Description Regulations V.1.1**
 
 Rules which must be followed mandatorily when writing the description of an odoo addon/module in its manifest file.
 
